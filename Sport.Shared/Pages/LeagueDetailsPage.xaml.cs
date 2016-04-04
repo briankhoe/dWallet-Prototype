@@ -280,21 +280,21 @@ namespace Sport.Shared
 		void Parallax()
 		{
 			if(_imageHeight <= 0)
-				_imageHeight = photoImage.Height;
+				_imageHeight = Saladelia.Height;
 
 			var y = scrollView.ScrollY * .4;
 			if(y >= 0)
 			{
 				//Move the Image's Y coordinate a fraction of the ScrollView's Y position
-				photoImage.Scale = 1;
-				photoImage.TranslationY = y;
+				Saladelia.Scale = 1;
+				Saladelia.TranslationY = y;
 			}
 			else
 			{
 				//Calculate a scale that equalizes the height vs scroll
 				double newHeight = _imageHeight + (scrollView.ScrollY * -1);
-				photoImage.Scale = newHeight / _imageHeight;
-				photoImage.TranslationY = scrollView.ScrollY / 2;
+				Saladelia.Scale = newHeight / _imageHeight;
+				Saladelia.TranslationY = scrollView.ScrollY / 2;
 			}
 		}
 

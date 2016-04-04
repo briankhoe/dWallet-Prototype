@@ -22,7 +22,7 @@
 			<ContentView Padding="0,0,0,0">
 				<Grid>
 					<Image Source="ic_missing_photo_white" StyleId="leaguePhoto" HorizontalOptions="Center" VerticalOptions="Center" />
-					<Image x:Name="Saladelia" Source="{Binding League.ImageUrl}" HorizontalOptions="Fill" HeightRequest="200"
+					<Image x:Name="photoImage" Source="{Binding League.ImageUrl}" HorizontalOptions="Fill" HeightRequest="200"
 						VerticalOptions="Center" Aspect="AspectFill" />
 
 					<StackLayout IsVisible="{Binding IsFirstPlace}" Orientation="Horizontal" VerticalOptions="End">
@@ -38,7 +38,7 @@
 
 			<StackLayout Grid.Row="1" Orientation="Vertical" Spacing="14" VerticalOptions="Fill" BackgroundColor="{StaticResource grayLight}">
 				<StackLayout Padding="24,8,24,0" Spacing="4" IsVisible="{Binding League.HasStarted}">
-					<Label Text="{Binding League.Name}" FontSize="Large" TextColor="{Binding League.Theme.Dark}" VerticalOptions="CenterAndExpand" />
+					<Label Text="Saladelia" FontSize="Large" TextColor="{Binding League.Theme.Dark}" VerticalOptions="CenterAndExpand" />
 				</StackLayout>
 
 				<StackLayout Padding="24,14,24,14" Spacing="4" IsVisible="{Binding League.HasStarted, Converter={x:Static local:InverseBoolConverter.Instance}}">
